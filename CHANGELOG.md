@@ -6,6 +6,7 @@ From version 2.6.0, the sections in this file adhere to the [keep a changelog](h
 
 ### Fixed
 * [#2112](https://github.com/Shopify/shopify-cli/pull/2112): Fix intermittent error ("can't add a new key into hash during iteration") in the `theme push` command
+* [#2121](https://github.com/Shopify/shopify-cli/pull/2121): Fix the hot-reload to work when the section name is not equal to the type
 
 ## Version 2.13.0
 
