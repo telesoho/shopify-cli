@@ -8,12 +8,14 @@ module ShopifyCLI
         autoload :NodeService, "shopify_cli/services/app/serve/node_service"
         autoload :RailsService, "shopify_cli/services/app/serve/rails_service"
         autoload :PHPService, "shopify_cli/services/app/serve/php_service"
+        autoload :CustomService, "shopify_cli/services/app/serve/custom_service"
       end
 
       module Create
         autoload :NodeService, "shopify_cli/services/app/create/node_service"
         autoload :RailsService, "shopify_cli/services/app/create/rails_service"
         autoload :PHPService, "shopify_cli/services/app/create/php_service"
+        autoload :CustomService, "shopify_cli/services/app/create/custom_service"
       end
 
       module Deploy

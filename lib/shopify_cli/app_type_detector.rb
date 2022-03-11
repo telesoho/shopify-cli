@@ -23,7 +23,7 @@ module ShopifyCLI
       end
       shopify_cli = YAML.load_file(shopify_cli_yml_path)
       case shopify_cli["project_type"]&.to_sym
-      when :node, :rails, :php
+      when :node, :rails, :php, :custom
         shopify_cli["project_type"].to_sym
       when nil
         raise TypeNotFoundError, "Couldn't detect the project type in directory: #{project_directory}"

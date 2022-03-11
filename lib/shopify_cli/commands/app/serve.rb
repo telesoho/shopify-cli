@@ -35,6 +35,12 @@ module ShopifyCLI
               port: port,
               context: @ctx
             )
+          when :custom
+            Services::App::Serve::CustomService.call(
+              host: host,
+              port: port,
+              context: @ctx
+            )
           end
         end
 

@@ -43,7 +43,7 @@ module ShopifyCLI
               " {{command:[ rails | node | php ]}}",
             help: <<~HELP,
             {{command:%s app create}}: Creates a new project in a subdirectory.
-              Usage: {{command:%s app create [ rails | node | php ]}}
+              Usage: {{command:%s app create [ rails | node | php | custom ]}}
             HELP
             rails: {
               help: <<~HELP,
