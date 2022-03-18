@@ -5,6 +5,7 @@ module ShopifyCLI
         subcommand :Rails, "rails", "shopify_cli/commands/app/create/rails"
         subcommand :PHP, "php", "shopify_cli/commands/app/create/php"
         subcommand :Node, "node", "shopify_cli/commands/app/create/node"
+        subcommand :Custom, "custom", "shopify_cli/commands/app/create/custom"
 
         def call(_args, _command_name)
           @ctx.puts(self.class.help)

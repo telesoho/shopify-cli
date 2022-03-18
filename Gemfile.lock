@@ -9,10 +9,32 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    actionpack (7.0.2.3)
+      actionview (= 7.0.2.3)
+      activesupport (= 7.0.2.3)
+      rack (~> 2.0, >= 2.2.0)
+      rack-test (>= 0.6.3)
+      rails-dom-testing (~> 2.0)
+      rails-html-sanitizer (~> 1.0, >= 1.2.0)
+    actionview (7.0.2.3)
+      activesupport (= 7.0.2.3)
+      builder (~> 3.1)
+      erubi (~> 1.4)
+      rails-dom-testing (~> 2.0)
+      rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    activemodel (7.0.2.3)
+      activesupport (= 7.0.2.3)
+    activesupport (7.0.2.3)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      tzinfo (~> 2.0)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
     ansi (1.5.0)
     ast (2.4.2)
+    binding_of_caller (1.0.0)
+      debug_inspector (>= 0.0.1)
     bugsnag (6.23.0)
       concurrent-ruby (~> 1.0)
     builder (3.2.4)
@@ -22,6 +44,7 @@ GEM
     concurrent-ruby (1.1.9)
     crack (0.4.5)
       rexml
+    crass (1.0.6)
     cucumber (7.0.0)
       builder (~> 3.2, >= 3.2.4)
       cucumber-core (~> 10.0, >= 10.0.1)
@@ -53,15 +76,25 @@ GEM
       cucumber-core (~> 10.0, >= 10.0.1)
       cucumber-cucumber-expressions (~> 12.1, >= 12.1.2)
       cucumber-messages (~> 17.0, >= 17.0.1)
+    debase (0.2.4.1)
+      debase-ruby_core_source (>= 0.10.2)
+    debase-ruby_core_source (0.10.14)
+    debug_inspector (1.1.0)
     diff-lcs (1.4.4)
+    erubi (1.10.0)
     fakefs (1.3.2)
     ffi (1.15.4)
     hashdiff (1.0.1)
+    i18n (1.10.0)
+      concurrent-ruby (~> 1.0)
     iniparse (1.5.0)
     liquid (5.1.0)
     listen (3.7.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
+    loofah (2.15.0)
+      crass (~> 1.0.2)
+      nokogiri (>= 1.5.9)
     method_source (1.0.0)
     mime-types (3.3.1)
       mime-types-data (~> 3.2015)
@@ -92,6 +125,20 @@ GEM
     public_suffix (4.0.6)
     racc (1.6.0)
     rack (2.2.3)
+    rack-test (1.1.0)
+      rack (>= 1.0, < 3)
+    rails-dom-testing (2.0.3)
+      activesupport (>= 4.2.0)
+      nokogiri (>= 1.6)
+    rails-html-sanitizer (1.4.2)
+      loofah (~> 2.3)
+    railties (7.0.2.3)
+      actionpack (= 7.0.2.3)
+      activesupport (= 7.0.2.3)
+      method_source
+      rake (>= 12.2)
+      thor (~> 1.0)
+      zeitwerk (~> 2.5)
     rainbow (3.1.1)
     rake (13.0.6)
     rb-fsevent (0.11.0)
@@ -116,19 +163,38 @@ GEM
       rubocop
     rubocop-shopify (2.0.1)
       rubocop (~> 1.11)
+    ruby-debug-ide (0.6.0)
+      rake (>= 0.8.1)
     ruby-progressbar (1.11.0)
+    spring (4.0.0)
+    sprockets (4.0.3)
+      concurrent-ruby (~> 1.0)
+      rack (> 1, < 3)
+    sprockets-rails (3.4.2)
+      actionpack (>= 5.2)
+      activesupport (>= 5.2)
+      sprockets (>= 3.0.0)
     sys-uname (1.2.2)
       ffi (~> 1.1)
     theme-check (1.10.1)
       liquid (>= 5.1.0)
       nokogiri (>= 1.12)
       parser (~> 3)
+    thor (1.2.1)
     timecop (0.9.4)
+    tzinfo (2.0.4)
+      concurrent-ruby (~> 1.0)
     unicode-display_width (2.1.0)
+    web-console (2.3.0)
+      activemodel (>= 4.0)
+      binding_of_caller (>= 0.7.2)
+      railties (>= 4.0)
+      sprockets-rails (>= 2.0, < 4.0)
     webmock (3.9.3)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
+    zeitwerk (2.5.4)
 
 PLATFORMS
   ruby
@@ -138,6 +204,7 @@ DEPENDENCIES
   byebug
   colorize (~> 0.8.1)
   cucumber (~> 7.0)
+  debase
   fakefs (>= 1.0)
   iniparse (~> 1.5)
   minitest (>= 5.0.0)
@@ -150,9 +217,12 @@ DEPENDENCIES
   rubocop-minitest
   rubocop-rake
   rubocop-shopify
+  ruby-debug-ide
   shopify-cli!
+  spring
   timecop
+  web-console
   webmock
 
 BUNDLED WITH
-   2.3.8
+   2.3.9

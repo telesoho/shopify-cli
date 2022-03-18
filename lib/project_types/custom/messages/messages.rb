@@ -5,8 +5,8 @@ module Custom
     MESSAGES = {
       custom: {
         help: <<~HELP,
-          Suite of commands for developing CUSTOM apps with Laravel. See {{command:%1$s app php <command> --help}} for usage of each command.
-            Usage: {{command:%1$s app php [ %2$s ]}}
+          Suite of commands for developing CUSTOM apps . See {{command:%1$s app custom <command> --help}} for usage of each command.
+            Usage: {{command:%1$s app custom [ %2$s ]}}
         HELP
         forms: {
           create: {
