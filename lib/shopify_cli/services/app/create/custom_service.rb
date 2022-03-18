@@ -32,6 +32,7 @@ module ShopifyCLI
               context,
               project_type: "custom",
               organization_id: form.organization_id,
+              callback_url: form.callback_url,
             )
 
             api_client = if ShopifyCLI::Environment.acceptance_test?

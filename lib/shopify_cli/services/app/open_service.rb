@@ -11,7 +11,7 @@ module ShopifyCLI
         end
 
         def call
-          context.open_url!("#{project.env.host}/login?shop=#{project.env.shop}")
+          context.open_url!("#{project.env.host}/?shop=#{project.env.shop}")
         end
       end
     end

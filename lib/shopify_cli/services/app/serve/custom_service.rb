@@ -21,11 +21,11 @@ module ShopifyCLI
             ShopifyCLI::Tasks::UpdateDashboardURLS.call(
               context,
               url: url,
-              callback_url: "/auth/callback",
+              callback_url: "/install/callback",
             )
 
             if project.env.shop
-              project_url = "#{project.env.host}/auth?shop=#{project.env.shop}"
+              project_url = "#{project.env.host}/?shop=#{project.env.shop}"
               context.puts("\n" + context.message("core.app.serve.open_info", project_url) + "\n")
             end
 

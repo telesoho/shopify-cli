@@ -15,6 +15,7 @@ module Custom
               invalid_app_type: "Invalid app type %s",
             },
             app_name: "App name",
+            callback_url: "Callback URL",
             app_type: {
               select: "What type of app are you building?",
               select_public: "Public: An app built for a wide merchant audience.",
