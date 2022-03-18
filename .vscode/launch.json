@@ -8,10 +8,10 @@
             "name": "Debug Local File",
             "type": "Ruby",
             "request": "launch",
-            "cwd": "${workspaceRoot}",
+            "cwd": "${workspaceRoot}/test/test-app",
             "program": "${workspaceRoot}/shopify-dev",
             "args": [
-                "app","create","custom"
+                "app","serve"
             ],
             "useBundler": true
         }
