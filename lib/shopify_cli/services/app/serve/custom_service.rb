@@ -18,10 +18,11 @@ module ShopifyCLI
             raise ShopifyCLI::Abort,
               context.message("core.app.serve.error.host_must_be_https") if url.match(/^https/i).nil?
             project.env.update(context, :host, url)
+            callback_url = project.config["callback_url"] ? project.config["callback_url"] : "/auth/callback"
             ShopifyCLI::Tasks::UpdateDashboardURLS.call(
               context,
               url: url,
-              callback_url: "/install/callback",
+              callback_url: callback_url,
             )
 
             if project.env.shop
