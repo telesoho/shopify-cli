@@ -1,6 +1,11 @@
 From version 2.6.0, the sections in this file adhere to the [keep a changelog](https://keepachangelog.com/en/1.0.0/) specification.
 
 ## [Unreleased]
+### Fixed
+* [#2086](https://github.com/Shopify/shopify-cli/pull/2086): Improve check of dependency versions
+* [#2149](https://github.com/Shopify/shopify-cli/pull/2149): Fix `ThemeAdminAPI` not to handle asset errors
+
+## Version 2.14.0
 
 ### Changed
 * [#2126](https://github.com/Shopify/shopify-cli/pull/2126): Use javy version 0.2.1
@@ -12,6 +17,7 @@ From version 2.6.0, the sections in this file adhere to the [keep a changelog](h
 * [#2112](https://github.com/Shopify/shopify-cli/pull/2112): Fix intermittent error ("can't add a new key into hash during iteration") in the `theme push` command
 * [#2088](https://github.com/Shopify/shopify-cli/pull/2088): Update theme-check to 1.10.1
 * [#2130](https://github.com/Shopify/shopify-cli/pull/2130): Fix Homebrew installation.
+* [#2133](https://github.com/Shopify/shopify-cli/pull/2133): Fix ignore file handling in DevServer::Watcher.
 
 ## Version 2.13.0
 
